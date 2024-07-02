@@ -8,7 +8,7 @@ import (
 	"github.com/hashicorp/vault/api"
 	"github.com/hashicorp/vault/sdk/plugin"
 
-	"github.com/martinbaillie/vault-plugin-secrets-github/github"
+	"github.com/ajvpot/vault-plugin-secrets-github/github"
 )
 
 func main() {
