@@ -1,4 +1,4 @@
-module github.com/martinbaillie/vault-plugin-secrets-github
+module github.com/ajvpot/vault-plugin-secrets-github
 
 go 1.22.0
 
@@ -7,6 +7,7 @@ require (
 	github.com/hashicorp/go-hclog v1.6.2
 	github.com/hashicorp/vault/api v1.12.1
 	github.com/hashicorp/vault/sdk v0.11.1
+	github.com/martinbaillie/vault-plugin-secrets-github v1.3.0
 	github.com/prometheus/client_golang v1.19.0
 	github.com/prometheus/common v0.50.0
 	gotest.tools v2.2.0+incompatible
@@ -30,6 +31,7 @@ require (
 	github.com/frankban/quicktest v1.14.3 // indirect
 	github.com/go-jose/go-jose/v3 v3.0.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/golang-jwt/jwt/v4 v4.2.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
