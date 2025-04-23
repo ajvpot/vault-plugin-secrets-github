@@ -11,6 +11,9 @@ import (
 	"github.com/hashicorp/vault/sdk/logical"
 )
 
+// Linker-provided project/build information.
+var projectVersion string
+
 const backendHelp = `
 GitHub Apps Token Backend
 `
@@ -47,6 +50,7 @@ func Factory(ctx context.Context, conf *logical.BackendConfig) (logical.Backend,
 		},
 		Paths: []*framework.Path{
 			b.pathInfo(),
+			b.pathInstallations(),
 			b.pathMetrics(),
 			b.pathConfig(),
 			b.pathToken(),
@@ -67,7 +71,8 @@ func Factory(ctx context.Context, conf *logical.BackendConfig) (logical.Backend,
 			// NOTE: Unfortunately GitHub has no mechanism for renewing tokens.
 			// Renew:
 		}},
-		Invalidate: b.Invalidate,
+		Invalidate:     b.Invalidate,
+		RunningVersion: projectVersion,
 	}
 
 	if conf == nil {
